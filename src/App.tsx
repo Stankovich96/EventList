@@ -19,7 +19,7 @@ function App() {
 		<div className='App'>
 			<header className='App-header'>
 				<h1>People Invited to My Event</h1>
-				<List />
+				<List people={people} />
 			</header>
 		</div>
 	);
