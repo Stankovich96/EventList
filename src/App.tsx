@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import List from './components/List';
+import AddToList from './components/AddToList';
 
 interface IState {
 	people: {
@@ -27,6 +27,7 @@ function App() {
 			<header className='App-header'>
 				<h1>People Invited to My Event</h1>
 				<List people={people} />
+				<AddToList />
 			</header>
 		</div>
 	);
