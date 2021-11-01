@@ -10,7 +10,7 @@ const AddToList = () => {
 				placeholder='Image Url'
 				className='AddToList-input'
 			/>{' '}
-			<input type='text' placeholder='Notes' className='AddToList-input' />
+			<textarea placeholder='Notes' className='AddToList-input' />
 		</div>
 	);
 };
