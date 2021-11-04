@@ -2,19 +2,26 @@ import React, { useState } from 'react';
 
 interface IState {
 	name: string;
-	url: string;
+	img: string;
 	age: string;
 	note?: string;
 }
 const AddToList = () => {
 	const [input, setInput] = useState<IState>({
 		name: '',
-		url: '',
+		img: '',
 		age: '',
 		note: '',
 	});
 
-	const handleChange = () => {};
+	const handleChange = (
+		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+	) => {
+		setInput({
+			...input,
+			[e.target.name]: e.target.value,
+		});
+	};
 
 	return (
 		<div className='AddToList'>
@@ -38,9 +45,9 @@ const AddToList = () => {
 				type='text'
 				placeholder='Image Url'
 				className='AddToList-input'
-				value={input.url}
+				value={input.img}
 				onChange={handleChange}
-				name='url'
+				name='img'
 			/>{' '}
 			<textarea
 				placeholder='Notes'
