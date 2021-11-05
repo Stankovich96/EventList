@@ -4,7 +4,7 @@ import { useState } from 'react';
 import List from './components/List';
 import AddToList from './components/AddToList';
 
-interface IState {
+export interface IState {
 	people: {
 		name: string;
 		url: string;
@@ -27,7 +27,7 @@ function App() {
 			<header className='App-header'>
 				<h1>People Invited to My Event</h1>
 				<List people={people} />
-				<AddToList />
+				<AddToList people={people} setPeople={setPeople} />
 			</header>
 		</div>
 	);
